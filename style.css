@@ -1,4 +1,4 @@
-/* Grundinställningar baserat på webbriktlinjer */
+/* Grundinställningar baserade på webbriktlinjer */
 body {
     background-color: #F5F5DC; 
     color: #333333;           
@@ -9,7 +9,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Lora', Georgia, serif;
-    color: #2E5936; /
+    color: #2E5936; 
 }
 
 /* Header & Navigering */
@@ -42,26 +42,21 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px; 
+    transition: background-color 0.2s, color 0.2s;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Main content area */
 main {
     padding: 20px;
     max-width: 1100px;
     margin: auto;
 }
 
-/* Video på startsidan */
 video {
     width: 100%;
     height: auto;
 }
 
-/* Info-boxar på startsidan */
+/* Flexbox för info-kort på startsidan */
 .info-container {
     display: flex;
     gap: 20px;
@@ -76,7 +71,7 @@ video {
     border-radius: 5px;
 }
 
-/* Hundkort */
+/* Layout för hundkort */
 .dog-grid {
     display: flex;
     gap: 30px;
@@ -108,7 +103,6 @@ video {
     display: block;
 }
 
-/* Tabell-styling */
 table {
     width: calc(100% - 30px);
     border-collapse: collapse;
@@ -131,7 +125,6 @@ th {
     color: white;
 }
 
-/* Galleri */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -144,9 +137,10 @@ th {
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Formulär */
+/* Formulär och kontaktinformation */
 .contact-wrapper {
     display: flex;
     gap: 40px;
@@ -165,15 +159,50 @@ th {
     border-radius: 4px;
 }
 
-input[type="submit"] {
+input[type="submit"], .js-btn, .toggle-table-btn {
     background-color: #2E5936;
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
-/* Footer */
+.toggle-table-btn {
+    margin: 0 15px 10px 15px;
+}
+
+/* ID-selektor för kontaktinformation */
+#contact-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Styling för slumpad hund på startsidan (Task 2) */
+.featured-dog-section {
+    background: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border-left: 5px solid #2E5936;
+}
+
+#random-dog-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.random-dog-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 footer {
     text-align: center;
     padding: 20px;
@@ -202,9 +231,10 @@ footer a { color: #f5f5dc; }
         margin: 5px 0;
     }
 
-    .info-container, .contact-wrapper, .dog-grid {
+    .info-container, .contact-wrapper, .dog-grid, #random-dog-container {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .dog-card {
@@ -214,7 +244,7 @@ footer a { color: #f5f5dc; }
 
 /* UTSKRIFTSLAYOUT */
 @media print {
-    header, footer, .contact-form, nav {
+    header, footer, .contact-form, nav, .js-btn, .toggle-table-btn {
         display: none;
     }
     body {
