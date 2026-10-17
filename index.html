@@ -6,6 +6,9 @@
     <meta name="description" content="Macita's Kennel - Uppfödare av Labrador Retriever med fokus på hälsa och natur.">
     <title>Hem | Macita's Kennel</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="randomizer.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -44,10 +47,16 @@
                 <p>Vi finns i en naturnära miljö där våra hundar får utlopp för sin naturliga arbetsvilja och energi.</p>
             </section>
         </div>
+
+        <!-- Task 2: Container för framslumpad hund -->
+        <section class="featured-dog-section">
+            <h2>Dagens utvalda hund</h2>
+            <div id="random-dog-container"></div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Macita's Kennel | Besök gärna <a href="https://www.skk.se" target="_blank">Svenska Kennelklubben</a> (Absolut länk)</p>
+        <p>&copy; 2026 Macita's Kennel | Besök gärna <a href="https://www.skk.se" target="_blank">Svenska Kennelklubben</a></p>
     </footer>
 </body>
 </html>
